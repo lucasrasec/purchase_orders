@@ -1,0 +1,15 @@
+
+### GetAll
+GET http://localhost:3000/assets
+
+### Create asset
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+  "id": 1,
+  "symbol": "teste"
+}
+
+### Find one asset
+GET http://localhost:3000/assets/1
