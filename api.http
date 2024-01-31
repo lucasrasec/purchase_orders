@@ -1,5 +1,5 @@
 
-### GetAll
+### GetAll Assets
 GET http://localhost:3000/assets
 
 ### Create asset
@@ -8,8 +8,23 @@ Content-Type: application/json
 
 {
   "id": 1,
-  "symbol": "teste"
+  "symbol": "teste 1"
 }
 
-### Find one asset
-GET http://localhost:3000/assets/1
+### Find asset by id (add id on the final of URL)
+GET http://localhost:3000/assets/
+
+### GetAll Orders
+GET http://localhost:3000/orders
+
+### GetAll Order by id (add id on the final of URL)
+GET http://localhost:3000/orders/
+
+### Post order
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+  "asset_id": 5,
+  "price": 300
+}
