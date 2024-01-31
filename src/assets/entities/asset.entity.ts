@@ -1,4 +1,5 @@
-import { Entity, PrimaryColumn, Column } from 'typeorm';
+import { Order } from 'src/orders/entities/order.entity';
+import { Entity, PrimaryColumn, Column, OneToMany } from 'typeorm';
 
 @Entity()
 export class Asset {
@@ -6,5 +7,8 @@ export class Asset {
   id: number;
 
   @Column()
-  symbol: string;
+  symbol: string = 'Basic';
+
+  @OneToMany(() => Order, (item) => item.asset)
+  order: Order;
 }

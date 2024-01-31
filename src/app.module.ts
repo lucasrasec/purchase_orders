@@ -5,20 +5,19 @@ import { AssetsModule } from './assets/assets.module';
 
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Asset } from './assets/entities/asset.entity';
+import { OrdersModule } from './orders/orders.module';
+import { Order } from './orders/entities/order.entity';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'root',
-      database: 'purchases',
-      entities: [Asset],
+      type: 'sqlite',
+      database: 'db/purchases',
+      entities: [Asset, Order],
       synchronize: true,
       logging: true,
     }),
     AssetsModule,
+    OrdersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
