@@ -25,9 +25,4 @@ Para executar o projeto, siga as seguintes etapas:
    ```bash
    npm run start:dev
 
-Abra http://localhost:3000 para ver a versão de produção do seu projeto.
 
-Tecnologias Utilizadas
-Next.js
-React
-Material-UI
